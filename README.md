@@ -57,17 +57,17 @@ tambah field yang dibutuhkan pada table admin di class **CreateAdminsTable** pad
 
 ```php
 public function up()
-    {
-        Schema::create('admins', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->enum('role',['admin','editor','operator'])->default('operator');
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
-        });
-    }
+{
+    Schema::create('admins', function (Blueprint $table) {
+        $table->id();
+        $table->string('name');
+        $table->string('email')->unique();
+        $table->enum('role',['admin','editor','operator'])->default('operator');
+        $table->string('password');
+        $table->rememberToken();
+        $table->timestamps();
+    });
+}
 ```
 
 ### Setup Seeder Admin
@@ -256,8 +256,8 @@ Route::group([
         Route::middleware(['auth:admin'])->group(function () {
             Route::post('logout','LoginAdminController@logout')->name('admin.logout');
             Route::view('/','dashboard')->name('dashboard');
-            Route::view('/post','data-post')->name('post')->middleware('can:level,"admin","editor"');
-            Route::view('/admin','data-admin')->name('admin')->middleware('can:level,"admin"');
+            Route::view('/post','data-post')->name('post')->middleware('can:role,"admin","editor"');
+            Route::view('/admin','data-admin')->name('admin')->middleware('can:role,"admin"');
         });
 });
 ```
