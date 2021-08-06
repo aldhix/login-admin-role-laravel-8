@@ -74,23 +74,26 @@ public function up()
 Buat beberapa admin dengan role berbeda pada method **run()**
 
 ```php
+use App\Models\Admin
+................................
+................................
 public function run()
 {
-    \App\Models\Admin::create([
+    Admin::create([
         'name'     => 'Administrator',
         'email'    => 'admin@localhost.com',
         'role'    => 'admin',
         'password' => bcrypt('password'),
     ]);
 
-    \App\Models\Admin::create([
+    Admin::create([
         'name'     => 'Editor',
         'email'    => 'editor@localhost.com',
         'role'    => 'editor',
         'password' => bcrypt('password'),
     ]);
 
-    \App\Models\Admin::create([
+    Admin::create([
         'name'     => 'Operator',
         'email'    => 'operator@localhost.com',
         'role'    => 'operator',
