@@ -1,9 +1,7 @@
 # Login Admin Role Laravel 8 (Manually Authenticating Users & Authorization) 
 Membuat login admin yang memiliki role  menggunakan Auth guard dan Authorization Larvel 8
 
-[![Login Admin Role Laravel 8 (Manually Authenticating Users & Authorization) ](https://img.youtube.com/vi/Y66sNEeCKAo/0.jpg)](https://www.youtube.com/watch?v=Y66sNEeCKAo)
-
-[Video : Login Admin Role Laravel 8 (Manually Authenticating Users & Authorization) - YouTube](https://youtu.be/Y66sNEeCKAo)
+[Video : Login Admin Role Laravel 8 (Manually Authenticating Users & Authorization) - YouTube](https://youtu.be/khl9vad7QFg)
 
 ## Instalasi
 ### Create Project New
